@@ -1,0 +1,26 @@
+{
+    "id": "B3A09D05",
+    "path": "~/Documents/github/data-scientist-with-R/00-introduction-to-R/0-intro-to-basics.Rmd",
+    "project_path": "00-introduction-to-R/0-intro-to-basics.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1680462856620.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "4,17",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1680463484,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1680463484571,
+    "read_only": false,
+    "read_only_alternatives": []
+}

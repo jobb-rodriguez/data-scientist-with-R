@@ -1,0 +1,25 @@
+---
+title: "Introduction with R"
+output: html_document
+---
+# Intro to basics
+## How it works
+R uses the \# sign to add comments.
+``` {r}
+# Calculate 3 + 4
+3 + 4
+# Calculate 6 + 12
+6 + 12
+```
+## Arithemetic with R
+## Variable assignment
+## Variable assignment (2)
+## Variable assignment (3)
+## Apples and oranges
+## Basic data types in R
+## What's that data type?
+# Vectors
+# Matrices
+# Factors
+# Data Frames
+# Lists
