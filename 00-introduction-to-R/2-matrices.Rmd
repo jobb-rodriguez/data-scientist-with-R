@@ -24,3 +24,76 @@ Construct a matrix with 3 rows that contain the numbers 1 up to 9
 ```{r echo = FALSE}
 matrix(1:9, byrow = TRUE, nrow = 3)
 ```
+
+## Analyze matrices, you shall
+```{r}
+# Box office Star Wars (in millions!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+
+# Create box_office
+box_office <- c(new_hope, empire_strikes, return_jedi)
+
+# Construct star_wars_matrix
+star_wars_matrix <- matrix(box_office, byrow = TRUE, nrow = 3)
+```
+
+## Naming a matrix
+Similar to vectors, you can add names for the rows and the columns of a matrix
+
+```
+rownames(my_matrix) <- row_names_vector
+colnames(my_matrix) <- col_names_vector
+```
+
+We went ahead and prepared two vectors for you: ```region```, and ```titles```. You will need these vectors to name the columns and rows of ```star_wars_matrix```, respectively.
+
+**Exericse**
+```{r echo = FALSE}
+# Vectors region and titles, used for naming
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+
+# Name the columns with region
+colnames(star_wars_matrix) <- region
+
+# Name the rows with titles
+rownames(star_wars_matrix) <- titles
+
+# Print out star_wars_matrix
+star_wars_matrix
+```
+
+## Calculating the worldwide box office
+To calculate the total box office revenue for the three Star Wars movies, you have to take the sum of the US revenue column and the non-US revenue column.
+
+In R, the function ```rowSums()``` conveniently calculates the totals for each row of a matrix. This function creates a new vector:
+
+```rowSums(my_matrix)```
+
+**Exercise**
+```{r}
+# Construct star_wars_matrix
+star_wars_matrix <- matrix(box_office, 
+                    nrow = 3, 
+                    byrow = TRUE, 
+                    dimnames = list(titles, region))
+
+worldwide_vector <- rowSums(star_wars_matrix)
+worldwide_vector
+```
+
+## Adding a column for the Worldwide box office
+
+
+## Adding a row
+
+
+## The total box office revenue for the entire sage
+
+
+## Selection of matrix elements
+
+
+## A little arithmetic with matrices

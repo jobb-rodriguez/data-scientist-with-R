@@ -384,6 +384,71 @@ should have three rows.</li>
 ## [2,]    4    5    6
 ## [3,]    7    8    9</code></pre>
 </div>
+<div id="analyze-matrices-you-shall" class="section level2">
+<h2>Analyze matrices, you shall</h2>
+<pre class="r"><code># Box office Star Wars (in millions!)
+new_hope &lt;- c(460.998, 314.4)
+empire_strikes &lt;- c(290.475, 247.900)
+return_jedi &lt;- c(309.306, 165.8)
+
+# Create box_office
+box_office &lt;- c(new_hope, empire_strikes, return_jedi)
+
+# Construct star_wars_matrix
+star_wars_matrix &lt;- matrix(box_office, byrow = TRUE, nrow = 3)</code></pre>
+</div>
+<div id="naming-a-matrix" class="section level2">
+<h2>Naming a matrix</h2>
+<p>Similar to vectors, you can add names for the rows and the columns of
+a matrix</p>
+<pre><code>rownames(my_matrix) &lt;- row_names_vector
+colnames(my_matrix) &lt;- col_names_vector</code></pre>
+<p>We went ahead and prepared two vectors for you: <code>region</code>,
+and <code>titles</code>. You will need these vectors to name the columns
+and rows of <code>star_wars_matrix</code>, respectively.</p>
+<p><strong>Exericse</strong></p>
+<pre><code>##                              US non-US
+## A New Hope              460.998  314.4
+## The Empire Strikes Back 290.475  247.9
+## Return of the Jedi      309.306  165.8</code></pre>
+</div>
+<div id="calculating-the-worldwide-box-office" class="section level2">
+<h2>Calculating the worldwide box office</h2>
+<p>To calculate the total box office revenue for the three Star Wars
+movies, you have to take the sum of the US revenue column and the non-US
+revenue column.</p>
+<p>In R, the function <code>rowSums()</code> conveniently calculates the
+totals for each row of a matrix. This function creates a new vector:</p>
+<pre class="rowsums(my_matrix)```"><code>
+**Exercise**
+
+```r
+# Construct star_wars_matrix
+star_wars_matrix &lt;- matrix(box_office, 
+                    nrow = 3, 
+                    byrow = TRUE, 
+                    dimnames = list(titles, region))
+
+worldwide_vector &lt;- rowSums(star_wars_matrix)
+worldwide_vector</code></pre>
+<pre><code>##              A New Hope The Empire Strikes Back      Return of the Jedi 
+##                 775.398                 538.375                 475.106</code></pre>
+</div>
+<div id="adding-a-column-for-the-worldwide-box-office" class="section level2">
+<h2>Adding a column for the Worldwide box office</h2>
+</div>
+<div id="adding-a-row" class="section level2">
+<h2>Adding a row</h2>
+</div>
+<div id="the-total-box-office-revenue-for-the-entire-sage" class="section level2">
+<h2>The total box office revenue for the entire sage</h2>
+</div>
+<div id="selection-of-matrix-elements" class="section level2">
+<h2>Selection of matrix elements</h2>
+</div>
+<div id="a-little-arithmetic-with-matrices" class="section level2">
+<h2>A little arithmetic with matrices</h2>
+</div>
 </div>
 
 
